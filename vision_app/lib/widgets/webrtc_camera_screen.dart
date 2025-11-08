@@ -202,7 +202,13 @@ class _WebRTCCameraScreenState extends State<WebRTCCameraScreen> {
         throw Exception('LocalDescription is null after ICE gathering');
       }
 
-      final response = await _sendOfferToServer(localDesc);
+      final provider = context.read<VisionProvider>();
+      final url = 'http://${provider.host}:${provider.port}/offer';
+      final response = await _sendHttpRequest(url, {
+        'sdp': offer.sdp,
+        'type': offer.type,
+      });
+
       if (response != null) {
         final remoteDesc = RTCSessionDescription(
           response['sdp'],
@@ -224,7 +230,8 @@ class _WebRTCCameraScreenState extends State<WebRTCCameraScreen> {
     RTCSessionDescription offer,
   ) async {
     try {
-      final url = 'http://192.168.0.100:9000/offer';
+      final provider = context.read<VisionProvider>();
+      final url = 'http://${provider.host}:${provider.port}/offer';
       final response = await _sendHttpRequest(url, {
         'sdp': offer.sdp,
         'type': offer.type,

@@ -50,7 +50,8 @@ class VisionProvider extends ChangeNotifier {
   Duration _wsReconnectDelay = const Duration(seconds: 3);
 
   // Configuration
-  final String _host = "192.168.0.100";
+  // TODO: Set _host to the IP address of the machine running backend_api/webrtc_server.py
+  final String _host = "YOUR_IP";
   final int _port = 9000;
   final int _fps = 50;
   final int _frameInterval = 20; // 1000ms / 50fps
@@ -66,6 +67,8 @@ class VisionProvider extends ChangeNotifier {
   bool get isSpeaking => _isSpeaking;
   bool get hasFirstResult => _hasFirstResult;
   bool get isWebSocketConnected => _wsConnected;
+  String get host => _host;
+  int get port => _port;
 
   VisionProvider() {
     _initializeTts();

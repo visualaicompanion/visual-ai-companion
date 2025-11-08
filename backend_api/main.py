@@ -74,7 +74,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Model paths
 depth_ckpt = os.path.join(os.path.dirname(__file__), "../depth-anything-v2/checkpoints/depth_anything_v2_vits.pth")
-yolo_model_path = os.path.join(os.path.dirname(__file__), "../YOLO.pt")
+yolo_model_path = os.path.join(os.path.dirname(__file__), "YOLO.pt")
 
 # Global model variables
 depth_model = None

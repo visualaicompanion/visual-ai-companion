@@ -39,10 +39,6 @@ pip install -r requirements.txt
 
 ### 2. Start WebRTC Server
 ```bash
-# Option A: Use the startup script
-./start_webrtc.sh
-
-# Option B: Manual start
 python3 webrtc_server.py --host 0.0.0.0 --port 8080
 ```
 

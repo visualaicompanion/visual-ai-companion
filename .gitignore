@@ -1,0 +1,28 @@
+# python cache / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.sqlite3
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# depth-anything repository clone (users clone separately)
+depth-anything-v2/
+
+# logs / data dumps
+depth_logs/
+*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# flutter / dart build outputs
+build/
+.dart_tool/
+.packages
+
+

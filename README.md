@@ -2,6 +2,10 @@
 
 A Flutter app with AI-powered object detection and depth analysis for visually impaired users. The app captures images and sends them to a FastAPI backend that performs YOLO object detection and depth estimation using DepthAnythingV2.
 
+# Introduction
+
+Navigating everyday environments poses persistent challenges for visually impaired individuals, often limiting their independence and mobility. This research introduces the Visual AI Companion, a real-time scene and navigation assistant designed to enhance spatial awareness and safety. Leveraging computer vision techniques including object recognition, obstacle detection, and depth estimation, the system provides guidance through its implementation on mobile application. By translating visual data into actionable feedback, the AI model empowers users to move through complex settings. Thus, the project aims to promote self-reliance and improve quality of life by offering an accessible tool tailored to the mobility needs of the visually impaired.
+
 ## Project Structure
 
 ```

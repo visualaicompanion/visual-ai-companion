@@ -2,7 +2,7 @@
 
 This setup enables **real-time video streaming** from your phone to your laptop, with instant AI analysis and text-to-speech feedback.
 
-## 🚀 What You Get
+## What You Get
 
 - **Live video stream** from phone to laptop (no more image capture delays!)
 - **Real-time processing** with YOLO + DepthAnythingV2 models
@@ -10,7 +10,7 @@ This setup enables **real-time video streaming** from your phone to your laptop,
 - **Text-to-speech** speaks analysis results in real-time
 - **~100-200ms latency** (near real-time performance)
 
-## 📱 Phone Setup
+## Phone Setup
 
 ### 1. Install Dependencies
 ```bash
@@ -29,7 +29,7 @@ final String _host = "YOUR_LAPTOP_IP"; // e.g., "172.20.10.4"
 flutter run
 ```
 
-## 💻 Laptop Setup
+## Laptop Setup
 
 ### 1. Install Python Dependencies
 ```bash
@@ -50,7 +50,7 @@ Starting server on port 8080...
 Your phone should connect to: ws://YOUR_IP:8080
 ```
 
-## 🔗 How It Works
+## How It Works
 
 ### 1. **Phone → Laptop**
 - Phone opens camera and starts WebRTC stream
@@ -68,14 +68,14 @@ Your phone should connect to: ws://YOUR_IP:8080
 - Text-to-speech speaks results instantly
 - Real-time feedback loop
 
-## 📊 Performance
+## Performance
 
 - **Video Stream**: 30 FPS (640x480)
 - **Processing**: Every 10th frame (3 FPS analysis)
 - **Latency**: ~100-200ms end-to-end
 - **Bandwidth**: ~2-5 Mbps (adjustable)
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Connection Issues
 - **Check firewall**: Ensure port 8080 is open
@@ -91,7 +91,7 @@ Your phone should connect to: ws://YOUR_IP:8080
 - **GPU memory**: Ensure CUDA is available for depth model
 - **Model loading**: Check that model files exist in correct paths
 
-## 🔧 Customization
+## Customization
 
 ### Video Quality
 ```dart
@@ -117,14 +117,14 @@ if self.frame_count % 10 == 0:  # Process every 10th frame
 COOLDOWN_SECONDS = 7  # Adjust cooldown between analyses
 ```
 
-## 🎯 Next Steps
+## Next Steps
 
 1. **Start WebRTC server** on laptop
 2. **Run Flutter app** on phone
 3. **Start streaming** - tap "Start Screening"
 4. **Enjoy real-time analysis** with instant TTS feedback!
 
-## 📝 Notes
+## Notes
 
 - **First connection** may take 5-10 seconds to establish
 - **WebRTC** automatically handles network changes and reconnection
